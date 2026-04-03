@@ -1,16 +1,36 @@
-# React + Vite
+# ICP Persona Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A 3-step wizard that generates detailed Ideal Customer Profile (ICP) personas using Claude AI.
 
-Currently, two official plugins are available:
+## How it works
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. **Product** — describe what you sell
+2. **Buyer** — set the industry, job title, and company size
+3. **Pain Points** — enter their pain points and goals
 
-## React Compiler
+Claude generates a structured persona with background, buying triggers, objections, and a messaging hook. You can download the result as JSON.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the ESLint configuration
+- React + Vite
+- Plain CSS
+- Anthropic API (`claude-sonnet-4-6`) called directly from the browser
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Local setup
+
+1. Clone the repo
+2. Create a `.env` file at the project root:
+   ```
+   VITE_ANTHROPIC_API_KEY=sk-ant-...
+   ```
+3. Install and run:
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+## Deployment
+
+Deploys automatically to GitHub Pages on every push to `main` via GitHub Actions.
+
+Live site: https://honourablekapa.github.io/icp-persona-builder/
