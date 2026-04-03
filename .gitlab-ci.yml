@@ -1,0 +1,26 @@
+image: node:20
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+  only:
+    - main
+
+pages:
+  stage: deploy
+  script:
+    - cp -r dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

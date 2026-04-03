@@ -1,0 +1,225 @@
+/* ── Layout ── */
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+  font-family: system-ui, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+/* ── Stepper ── */
+.stepper {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.step {
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: #f0f0f0;
+  color: #888;
+}
+
+.step.done {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.step.active {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ── Step card ── */
+.step-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step-card h2 {
+  margin: 0 0 4px;
+}
+
+.step-card p {
+  margin: 0;
+  color: #6b7280;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+
+/* ── Buttons ── */
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+button.secondary:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+/* ── Persona card ── */
+.persona-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.persona-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.persona-header h2 {
+  margin: 0;
+}
+
+.subtitle {
+  margin: 2px 0;
+  color: #374151;
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 540px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+.persona-card section h3 {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+
+.persona-card section ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.persona-card section ul li {
+  margin-bottom: 4px;
+}
+
+.hook-box {
+  background: #eff6ff;
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+.hook-box blockquote {
+  margin: 8px 0 0;
+  font-style: italic;
+  color: #1e40af;
+  border-left: 3px solid #2563eb;
+  padding-left: 12px;
+}
+
+/* ── Error ── */
+.error {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 16px;
+}
